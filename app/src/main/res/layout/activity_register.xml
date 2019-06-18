@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context=".activitys.RegisterActivity">
+
+    <!--
+    封装控件或者布局的方法有两种：
+    1.自定义View的方法
+    2.include的方法
+    3.android values-styles直接定义一个全局样式
+    -->
+
+    <include
+        layout="@layout/nav_bar"/>
+
+    <ImageView
+        android:src="@mipmap/welcome1"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/marginSize"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <com.example.ft.musicdemo.views.InputView
+        android:id="@+id/input_phone_confirm"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/inputViewHight"
+        android:layout_marginTop="@dimen/marginSize"
+        app:input_icon="@mipmap/phone"
+        app:input_hint="请输入手机号"
+        app:is_password="false"
+        />
+
+    <View style="@style/line"/>
+
+    <com.example.ft.musicdemo.views.InputView
+        android:id="@+id/input_password_confirm"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/inputViewHight"
+        app:input_icon="@mipmap/pw"
+        app:input_hint="请输入密码"
+        app:is_password="true"
+        />
+
+    <View style="@style/line"/>
+
+    <com.example.ft.musicdemo.views.InputView
+        android:id="@+id/input_password_confirm_con"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/inputViewHight"
+        app:input_icon="@mipmap/pw"
+        app:input_hint="请确认密码"
+        app:is_password="true"
+        />
+
+    <View style="@style/line"/>
+
+    <Button
+        style="@style/commitBtn"
+        android:text="注  册"
+        android:layout_marginTop="@dimen/marginSize"
+        android:onClick="onRegisterClick"
+        tools:ignore="OnClick" />
+
+
+
+</LinearLayout>

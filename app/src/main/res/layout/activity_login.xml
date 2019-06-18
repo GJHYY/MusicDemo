@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context=".activitys.LoginActivity">
+
+    <!--
+    封装控件或者布局的方法有两种：
+    1.自定义View的方法
+    2.include的方法
+    3.android values-styles直接定义一个全局样式
+    -->
+
+    <include
+        layout="@layout/nav_bar"/>
+
+    <ImageView
+        android:src="@mipmap/welcome1"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/marginSize"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <com.example.ft.musicdemo.views.InputView
+        android:id="@+id/input_phone"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/inputViewHight"
+        android:layout_marginTop="@dimen/marginSize"
+        app:input_icon="@mipmap/phone"
+        app:input_hint="手机号"
+        app:is_password="false"
+        />
+
+    <View style="@style/line"/>
+
+    <com.example.ft.musicdemo.views.InputView
+        android:id="@+id/input_password"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/inputViewHight"
+        app:input_icon="@mipmap/pw"
+        app:input_hint="密码"
+        app:is_password="true"
+        />
+
+    <View style="@style/line"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/marginSize"
+        android:text="立即注册"
+        android:layout_gravity="center_horizontal"
+        android:textSize="@dimen/infoSize"
+        android:textColor="@color/mainColor"
+        android:onClick="onRegClick1"
+        />
+
+    <Button
+        style="@style/commitBtn"
+        android:text="登  陆"
+        android:layout_marginTop="@dimen/marginSize"
+        android:onClick="onCommitClick"
+        />
+
+
+
+</LinearLayout>
